@@ -5,6 +5,6 @@ stdPipeline (
         IMAGE_TAG=$(git log -n 1 --pretty=format:'%H' | cut -c1-8)
         IMAGE=registry.example.com:5000/example-api-go:$IMAGE_TAG
         docker build . -t $IMAGE
-        echo "$IMAGE" > $WORKSPACE\\image
+        echo "$IMAGE" > $WORKSPACE/image
     '''        
 )
